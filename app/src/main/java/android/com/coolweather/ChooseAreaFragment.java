@@ -6,6 +6,7 @@ import android.com.coolweather.db.County;
 import android.com.coolweather.db.Province;
 import android.com.coolweather.util.HttpUtil;
 import android.com.coolweather.util.Utility;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -105,7 +106,7 @@ public class ChooseAreaFragment extends Fragment {
                 } else if (currentLevel == LEVEL_CITY) {
                     selectedCity = cityList.get(position);
                     queryCounties();
-                } /*else if (currentLevel == LEVEL_COUNTY) {
+                } else if (currentLevel == LEVEL_COUNTY) {
                     String weatherId = countyList.get(position).getWeatherId();
                     if (getActivity() instanceof MainActivity) {
                         Intent intent = new Intent(getActivity(), WeatherActivity.class);
@@ -118,7 +119,7 @@ public class ChooseAreaFragment extends Fragment {
                         activity.swipeRefresh.setRefreshing(true);
                         activity.requestWeather(weatherId);
                     }
-                }*/
+                }
             }
         });
         backButton.setOnClickListener(new View.OnClickListener() {
